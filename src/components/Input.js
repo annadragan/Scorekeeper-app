@@ -1,18 +1,21 @@
+import { findByLabelText } from '@testing-library/react';
 import styled from 'styled-components';
 
-export default function Input({ label }) {
+export default function Input({ label, placeholder }) {
   return (
-    <form>
+    <Wrapper>
       <label>{label}</label>
-      <RawData placeholder="e.g. Carcassonne"></RawData>
-      <label>{}</label>
-      <RawData placeholder="e.g. John Doe, Jane Doe"></RawData>
-    </form>
+      <RawData placeholder={placeholder}></RawData>
+    </Wrapper>
   );
 }
 
+const Wrapper = styled.section`
+  background-color: lightpink;
+`;
+
 const RawData = styled.input`
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   width: 70%;
   padding: 7px 10px;
   margin: 8px 0;

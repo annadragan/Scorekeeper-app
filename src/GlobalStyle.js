@@ -9,13 +9,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 112.5%;
     line-height: 1.5;
-  }
-  
-  input,
-  label,
-  textarea,
-  button {
-    font-size: 1.2em;
+    display:flex;
+    justify-content: center;
+    color: crimson;
+    text-align: center;
   }
 `;
 export default GlobalStyle;

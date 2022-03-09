@@ -16,10 +16,15 @@ const PlayerInfo = styled.section`
 `;
 const PlayerName = styled.span`
   margin-right: auto;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
 `;
 
 const PlayerScore = styled.span`
   margin: 0 12px;
+  display: flex;
+  align-items: center;
 `;
 
 const PlayerButton = styled.button`
@@ -31,6 +36,7 @@ const PlayerButton = styled.button`
   border: none;
   height: 2.2rem;
   width: 2.2rem;
+  margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
