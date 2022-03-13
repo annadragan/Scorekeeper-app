@@ -1,22 +1,32 @@
-import { findByLabelText } from '@testing-library/react';
 import styled from 'styled-components';
 
-export default function Input({ label, placeholder }) {
+export default function Input({
+  labelDescription,
+  name,
+  value,
+  placeholder,
+  onChange,
+  required,
+}) {
   return (
-    <Wrapper>
-      <label>{label}</label>
-      <RawData placeholder={placeholder}></RawData>
-    </Wrapper>
+    <>
+      <label htmlFor={name}>{labelDescription}</label>
+      <InputStyled
+        id={name}
+        name={name}
+        placeholder={placeholder}
+        type="text"
+        value={value}
+        onChange={onChange}
+        required={required}
+      />
+    </>
   );
 }
 
-const Wrapper = styled.section`
-  background-color: lightpink;
-`;
 
-const RawData = styled.input`
+const InputStyled = styled.input`
   font-size: 0.7rem;
-  width: 70%;
   padding: 7px 10px;
   margin: 8px 0;
   border: 1px solid crimson;
