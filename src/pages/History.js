@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import Button from '../components/Button';
+
 import HistoryOverview from '../components/HistoryOverview';
 
 
-export default function History({ overview, onPlayGame }) {
+export default function History({ overview }) {
   return (
     <OverviewPage>
       {overview.map(({ nameOfGame, players, id }) => (
         <HistoryOverview key={id} nameOfGame={nameOfGame} players={players} />
       ))}
-      <Button aria-label="Play button" onClick={onPlayGame}>Play game</Button>
+     
     </OverviewPage>
   );
 }

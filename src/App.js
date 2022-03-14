@@ -6,6 +6,8 @@ import Navigation from './components/Navigation';
 import Game from './pages/Game';
 import CreateGame from './pages/Create';
 import History from './pages/History';
+import Play from './pages/Play';
+
 
 export default function App() {
 
@@ -79,6 +81,7 @@ export default function App() {
       <h1>⚽ Scorekeeper</h1>
     <Navigation nameOfGame={nameOfGame} players={players} />
       <Routes>
+      <Route path="/" element={<Play onPlayGame={startNewGame} />} />
         <Route
           path="/createpage"
           element={
@@ -88,8 +91,6 @@ export default function App() {
               onCreateGame={createGame}
               onAddPlayer={addPlayer}
               onStartGame={startGame}
-              // kommm
-              onPlayGame={startNewGame}
             />
           }
         />
@@ -108,7 +109,7 @@ export default function App() {
         />
         <Route
           path="/overview"
-          element={<History overview={overview} onPlayGame={startNewGame} />}
+          element={<History overview={overview} />}
         />
       </Routes>
     </AppLayout>

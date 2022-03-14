@@ -4,7 +4,8 @@ import styled from 'styled-components';
 export default function Navigation() {
   return (
     <Nav>
-      <FooterLink to="/gamepage">Start</FooterLink>
+      <FooterLink to="/">Play</FooterLink>
+      <FooterLink to="/gamepage">Score</FooterLink>
       <FooterLink to="/overview">Overview</FooterLink>
     </Nav>
   );
@@ -13,7 +14,6 @@ export default function Navigation() {
 const FooterLink = styled(NavLink)`
   display: flex;
   flex: 1;
-  /* flex-flow: row wrap; */
   justify-content: center;
   border-radius: 2px 23px;
   align-items: center;
@@ -22,6 +22,7 @@ const FooterLink = styled(NavLink)`
   color: white;
   background-color: crimson;
   margin: 0 7px;
+  padding: 10px;
 
   &.active {
     background-color: #ea3e70;

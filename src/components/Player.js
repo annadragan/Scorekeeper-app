@@ -8,7 +8,8 @@ export default function Player({
 }) {
   return (
     <PlayerInfo>
-      {name}
+    <PlayerName>
+      {name}</PlayerName>
       <PlayerScore>
       <PlayerButton aria-label="Decrease score" onClick={onDecreasePlayerScore}>
         -
@@ -23,14 +24,15 @@ export default function Player({
 }
 
 const PlayerInfo = styled.div`
-  margin-right: auto;
-  margin-left: 5px;
   display: flex;
   align-items: center;
 `;
 
+const PlayerName = styled.p`
+color: hotpink;
+font-weight: bold;`
+
 const PlayerScore = styled.div`
-  margin: 0 12px;
   display: flex;
   align-items: center;
 `;

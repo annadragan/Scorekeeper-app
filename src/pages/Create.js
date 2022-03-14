@@ -17,7 +17,7 @@ export default function CreateGame({
   const [game, setGame] = useState('');
   const [playerNames, setPlayerNames] = useState('');
 
-  // const disabled = nameOfGame === '' || playerNames === '';
+  const disabled = nameOfGame === '' || playerNames === '';
    function handleSubmitGame(event) {
     event.preventDefault();
     onCreateGame(game);
@@ -29,6 +29,17 @@ export default function CreateGame({
     onAddPlayer(playerNames.split(',').map(name => name.trim()));
     setPlayerNames('');
   }
+
+  // function handleSubmit(event){
+  //   event.preventDefault();
+  //   onCreateGame({
+  //     game,
+  //     playerNames: playerNames.split(",").map(name => name.trim()));
+  //   });
+  //   setGame('')
+  //   setPlayerNames('');
+  // }
+  // }
 
   return (
     <>

@@ -24,8 +24,8 @@ export default function Game({
           onDecreasePlayerScore={() => onDecreasePlayerScore(index)}
         />
       ))}
+       <CreateButton  aria-label="Game over" onClick={onGameOver}>Game over</CreateButton>
       <CreateButton  aria-label="Reset scores" onClick={onReset}>Reset scores</CreateButton>
-      <CreateButton  aria-label="Game over" onClick={onGameOver}>Game over</CreateButton>
     </>
   );
 }
