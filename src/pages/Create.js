@@ -10,13 +10,25 @@ export default function CreateGame({
   onAddPlayer,
   onCreateGame,
   onStartGame,
+  // kommm
+  // onPlayGame
 }) {
 
   const [game, setGame] = useState('');
   const [playerNames, setPlayerNames] = useState('');
 
   // const disabled = nameOfGame === '' || playerNames === '';
- 
+   function handleSubmitGame(event) {
+    event.preventDefault();
+    onCreateGame(game);
+    setGame('');
+  }
+
+  function handleSubmitPlayer(event) {
+    event.preventDefault();
+    onAddPlayer(playerNames.split(',').map(name => name.trim()));
+    setPlayerNames('');
+  }
 
   return (
     <>
@@ -28,7 +40,7 @@ export default function CreateGame({
           <Input
             name={'game-name'}
             labelText="Name of game"
-            placeholder="WeyKick"
+            placeholder="e.g. WeyKick"
             type="text"
             value={game}
             onChange={event => setGame(event.target.value)}
@@ -61,21 +73,12 @@ export default function CreateGame({
         </p>
       ))}
       </Container>
-      <Button  aria-label="Start game" onClick={onStartGame}>Start Game</Button>
+      <Button  aria-label="Start game" onClick={onStartGame}>Play</Button>
+   {/* kommm */}
+       {/* <Button aria-label="Play button" onClick={onPlayGame}>Play game</Button> */}
       </>
   );
 
-  function handleSubmitGame(event) {
-    event.preventDefault();
-    onCreateGame(game);
-    setGame('');
-  }
-
-  function handleSubmitPlayer(event) {
-    event.preventDefault();
-    onAddPlayer(playerNames.split(',').map(name => name.trim()));
-    setPlayerNames('');
-  }
 }
 
 const Form = styled.form`

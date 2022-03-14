@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default function Navigation() {
   return (
     <Nav>
-      <FooterLink to="/gamepage">Play game</FooterLink>
+      <FooterLink to="/gamepage">Start</FooterLink>
       <FooterLink to="/overview">Overview</FooterLink>
     </Nav>
   );

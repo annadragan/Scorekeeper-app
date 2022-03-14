@@ -14,4 +14,5 @@ const ButtonCreate= styled.button`
   color: azure;
   border: 1px solid crimson;
   margin: 5px;
+  background-color: #ea3e70;
 `;

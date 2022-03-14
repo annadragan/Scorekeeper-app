@@ -76,7 +76,7 @@ export default function App() {
 
   return (
     <AppLayout>
-      <h1>Scorekeeper</h1>
+      <h1>⚽ Scorekeeper</h1>
     <Navigation nameOfGame={nameOfGame} players={players} />
       <Routes>
         <Route
@@ -88,6 +88,8 @@ export default function App() {
               onCreateGame={createGame}
               onAddPlayer={addPlayer}
               onStartGame={startGame}
+              // kommm
+              onPlayGame={startNewGame}
             />
           }
         />
@@ -122,4 +124,5 @@ const AppLayout = styled.div`
   box-shadow: 2px 2px 8px pink;
   border-radius: 4px;
   padding: 20px;
+  margin-top: 30%;
 `;
