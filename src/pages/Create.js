@@ -10,8 +10,6 @@ export default function CreateGame({
   onAddPlayer,
   onCreateGame,
   onStartGame,
-  // kommm
-  // onPlayGame
 }) {
 
   const [game, setGame] = useState('');
@@ -29,17 +27,6 @@ export default function CreateGame({
     onAddPlayer(playerNames.split(',').map(name => name.trim()));
     setPlayerNames('');
   }
-
-  // function handleSubmit(event){
-  //   event.preventDefault();
-  //   onCreateGame({
-  //     game,
-  //     playerNames: playerNames.split(",").map(name => name.trim()));
-  //   });
-  //   setGame('')
-  //   setPlayerNames('');
-  // }
-  // }
 
   return (
     <>
@@ -85,8 +72,6 @@ export default function CreateGame({
       ))}
       </Container>
       <Button  aria-label="Start game" onClick={onStartGame}>Play</Button>
-   {/* kommm */}
-       {/* <Button aria-label="Play button" onClick={onPlayGame}>Play game</Button> */}
       </>
   );
 

@@ -26,15 +26,18 @@ export default function Player({
 const PlayerInfo = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const PlayerName = styled.p`
-color: hotpink;
+color: crimson;
 font-weight: bold;`
 
 const PlayerScore = styled.div`
-  display: flex;
-  align-items: center;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
 `;
 
 const PlayerButton = styled.button`
